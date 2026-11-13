@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capitán Sipi · Escuela Las Américas</title>
+<meta name="description" content="Aprende a cuidarte en lluvias, inundaciones, sismos e incendios con el Capitán Sipi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-nivel="alto">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <button class="brand" data-go="inicio" aria-label="Ir al inicio">
+    <span class="mini" data-owl="mini"></span>
+    <span class="brand-t">Capitán Sipi<small>Escuela Las Américas</small></span>
+  </button>
+  <nav id="nav" aria-label="Menú principal">
+    <button data-go="inicio">🏠 Inicio</button>
+    <button data-go="aprender">📚 Aprender</button>
+    <button data-go="senales">🚸 Señales</button>
+    <button data-go="juegos">🎮 Juegos</button>
+    <button data-go="mapa">🗺️ Mapa</button>
+    <button data-go="respuesta">🌧️ Si se inunda</button>
+    <button data-go="maestros">👩‍🏫 Docentes</button>
+  </nav>
+  <div class="tools">
+    <div class="starbox" title="Tus estrellas">⭐ <b id="starCount">0</b></div>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section id="inicio" class="screen">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="kicker">Escuela Primaria Urbana Las Américas</p>
+        <h1>¡Hola! Soy el Capitán Sipi</h1>
+        <p class="lead">Juntos vamos a aprender a cuidarnos cuando llueve mucho, cuando tiembla y cuando hay fuego. ¡Elige una misión!</p>
+        <div class="hero-cta">
+          <button class="btn big" data-go="aprender">¡Empezar a aprender!</button>
+          <button class="btn big alt" data-go="juegos">🎮 Jugar</button>
+        </div>
+      </div>
+      <div class="hero-owl">
+        <div class="bubble" id="bubble" role="status"></div>
+        <button class="owl-btn" id="owlBtn" aria-label="Escuchar otro consejo del Capitán Sipi" data-owl="hero wave"></button>
+        <div class="rain" aria-hidden="true"></div>
+      </div>
+    </div>
+    <h2 class="sec">Elige tu misión</h2>
+    <div class="missions" id="missions"></div>
+    <h2 class="sec">Nuestra escuela en números</h2>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <section id="aprender" class="screen">
+    <h2 class="sec">📚 Aprende con el Capitán</h2>
+    <div id="topicTabs" class="tabs" role="tablist" aria-label="Temas"></div>
+    <div id="topicBody"></div>
+  </section>
+
+  <section id="senales" class="screen">
+    <h2 class="sec">🚸 Detective de señales</h2>
+    <p class="sub">Toca cada señal para descubrir qué significa y si ya la tenemos en nuestra escuela.</p>
+    <div id="signGrid" class="sign-grid"></div>
+  </section>
+
+  <section id="juegos" class="screen">
+    <h2 class="sec">🎮 Zona de juegos</h2>
+    <div id="juegosArea"></div>
+  </section>
+
+  <section id="mapa" class="screen">
+    <h2 class="sec">🗺️ Mapa de nuestra escuela</h2>
+    <p class="sub">Toca los números y los íconos para descubrir los lugares que debemos cuidar.</p>
+    <div class="map-wrap">
+      <div class="card map-card" id="mapSvgBox"></div>
+      <div class="card info-card" id="mapInfo" aria-live="polite"></div>
+    </div>
+    <div class="legend" id="mapLegend"></div>
+  </section>
+
+  <section id="respuesta" class="screen">
+    <h2 class="sec">🌧️ ¿Qué hacemos si se inunda la escuela?</h2>
+    <p class="sub">Así responde nuestra escuela cuando las coladeras regresan el agua. Avanza paso a paso.</p>
+    <div id="stepper"></div>
+    <h2 class="sec">¿Quién hace qué?</h2>
+    <div id="roles" class="roles"></div>
+  </section>
+
+  <section id="maestros" class="screen">
+    <h2 class="sec">👩‍🏫 Guía para docentes</h2>
+    <div id="teacher"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Proyecto del Equipo 4 · Ingeniería de Sistemas · ITESI · Prototipo educativo basado en el diagnóstico de campo de la Escuela Primaria Urbana Las Américas (septiembre 2026).</p>
+  <p>Esta herramienta apoya el aprendizaje y <b>no sustituye</b> los protocolos oficiales de Protección Civil.</p>
+</footer>
+
+<div id="confetti" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>
